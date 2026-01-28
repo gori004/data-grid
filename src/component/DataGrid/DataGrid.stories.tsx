@@ -1,4 +1,4 @@
- import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { DataGrid } from './DataGrid'
 
 type Person = {
@@ -7,11 +7,12 @@ type Person = {
   age: number
 }
 
-const rows: Person[] = Array.from({ length: 5000 }, (_, i) => ({
+ const rows: Person[] = Array.from({ length: 150 }).map((_, i) => ({
   id: i,
   name: `User ${i}`,
   age: 20 + (i % 30),
 }))
+
 
 const columns = [
   {
